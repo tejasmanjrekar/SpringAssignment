@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  
+	<bean id="myCourse" class="coursetodo.Course">
+		<property name="courseId" value="101"/>
+		<property name="title" value="Core Java"/>
+		<property name="duration" value="200"/>
+		<property name="provider" value="Udemy"/>
+		<property name="cost" value="2000"/>
+	</bean>
+	
+	<bean id="myCourse2" class="coursetodo.Course">
+		<constructor-arg value="102"/>
+		<constructor-arg value="Database"/>
+		<constructor-arg value="180"/>
+		<constructor-arg value="Unacademy"/>
+		<constructor-arg value="1800"/>
+	</bean>
+	
+	<bean id="myCourse3" class="coursetodo.Course">
+		<constructor-arg value="102"/>
+		<constructor-arg value="Database"/>
+		<constructor-arg value="180"/>
+		<constructor-arg value="1800"/>
+		<constructor-arg value="Unacademy"/>
+	</bean>
+	
+	<bean class="day18.MyClass" id="myClass" lazy-init="true" 
+			scope="prototype"/>
+</beans>
